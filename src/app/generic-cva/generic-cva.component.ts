@@ -86,7 +86,7 @@ export class GenericCvaComponent implements ControlValueAccessor, Validator {
     }
 }
 
-interface DynFormControlComponent<T = any> {
+export interface DynFormControlComponent<T = any> {
     props: any;
     disabled: boolean;
     change: EventEmitter<T>;

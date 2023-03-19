@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { AbstractControl, ValidationErrors } from '@angular/forms';
+import { DynFormControlComponent } from '../generic-cva/generic-cva.component';
 
 @Component({
     selector: 'app-example-control',
@@ -45,7 +46,7 @@ import { AbstractControl, ValidationErrors } from '@angular/forms';
     ],
     styleUrls: ['./example-control.component.scss'],
 })
-export class ExampleControlComponent {
+export class ExampleControlComponent implements DynFormControlComponent {
     @Input('props') props: { increment: number } = {
         increment: 0,
     };
